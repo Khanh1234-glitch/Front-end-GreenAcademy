@@ -1,0 +1,174 @@
+{
+  "dataShirt": [
+    {
+      "id": 1,
+      "name": "Áo Hoodie Redikick Signature",
+      "price": "530.000₫",
+      "priceSale": "439.000₫",
+      "sale": "-17%",
+      "status": "NEW",
+
+      "color": ["black", "#333300", "#AEAEB0"],
+      "checkImg": {
+        "black": true,
+        "#333300": false,
+        "#AEAEB0": false
+      },
+      "linkImg": {
+        "black": "https://redikick.com/wp-content/uploads/2023/11/Redikick-Signature-Hoodie-A23024-avatar-4-430x430.jpg",
+        "#333300": "https://redikick.com/wp-content/uploads/2023/11/Redikick-Signature-Hoodie-A23024-xam-chi-430x430.jpg",
+        "#AEAEB0": "https://redikick.com/wp-content/uploads/2023/11/Redikick-Signature-Hoodie-A23024-avatar-2-430x430.jpg"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Áo Hoodie Redikick Logo – A23023",
+      "price": "530.000₫",
+      "priceSale": "429.000₫",
+      "sale": "-19%",
+      "status": "NEW",
+      "img": "https://redikick.com/wp-content/uploads/2023/11/Redikick-Logo-Hoodie-A23023-avatar-2-430x430.jpg",
+      "color": ["black", "#333300", "#AEAEB0"],
+      "checkImg": {
+        "black": true,
+        "#333300": false,
+        "#AEAEB0": false
+      },
+      "linkImg": {
+        "black": "https://redikick.com/wp-content/uploads/2023/11/Redikick-Logo-Hoodie-A23023-avatar-1-430x430.jpg",
+        "#333300": "https://redikick.com/wp-content/uploads/2023/11/Redikick-Logo-Hoodie-A23023-xam-chi-430x430.jpg",
+        "#AEAEB0": "https://redikick.com/wp-content/uploads/2023/11/Redikick-Logo-Hoodie-A23023-avatar-2-430x430.jpg"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Áo Hoodie Redikick WGG – A23019",
+      "price": "530.000₫",
+      "priceSale": "469.000₫",
+      "sale": "-12%",
+      "status": "NEW",
+      "color": ["black", "#333300", "#AEAEB0"],
+      "checkImg": {
+        "black": true,
+        "#333300": false,
+        "#AEAEB0": false
+      },
+      "linkImg": {
+        "black": "https://redikick.com/wp-content/uploads/2023/11/Redikick-WGG-Hoodie-A23019-4-430x430.jpg",
+        "#333300": "https://redikick.com/wp-content/uploads/2023/11/Redikick-WGG-Hoodie-A23019-xam-chi-430x430.png",
+        "#AEAEB0": "https://redikick.com/wp-content/uploads/2023/11/Redikick-WGG-Hoodie-A23019-1-430x430.jpg"
+      },
+      "img": "https://redikick.com/wp-content/uploads/2023/11/Redikick-WGG-Hoodie-A23019-4-430x430.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Quần dài thể thao bó ống Redikick Q23016",
+      "price": "400.000₫",
+      "priceSale": "320.000₫",
+      "sale": "-20%",
+      "status": "NEW",
+      "color": ["black"],
+      "checkImg": {
+        "black": true
+      },
+      "linkImg": {
+        "black": "https://redikick.com/wp-content/uploads/2023/11/Redikick-WGG-Hoodie-A23019-1-430x430.jpg"
+      },
+      "img": "https://redikick.com/wp-content/uploads/2023/10/QUAN-DAI-THE-THAO-Redikick-ong-bo-Q23016-Training-Pants-11-430x430.png"
+    },
+    {
+      "id": 5,
+      "name": "Redikick Functional Premium Cap",
+      "price": "600.000₫",
+      "priceSale": "600.000₫",
+      "sale": "0%",
+      "status": "NEW",
+      "color": ["black", "white"],
+      "checkImg": {
+        "black": true,
+
+        "white": false
+      },
+      "linkImg": {
+        "black": "https://redikick.com/wp-content/uploads/2023/10/mu-the-thao-redikick-function-premium-cap-M23002-den-trang7-430x430.png",
+        "white": "https://redikick.com/wp-content/uploads/2023/10/mu-the-thao-redikick-function-premium-cap-M23002-den-trang14.png"
+      },
+      "img": "https://redikick.com/wp-content/uploads/2023/10/mu-the-thao-redikick-function-premium-cap-M23002-den-trang7-430x430.png"
+    },
+    {
+      "id": 6,
+      "name": "Áo Hoodie Redikick Signature",
+      "price": "1.000.000₫",
+      "priceSale": "1.000.000₫",
+      "sale": "-0%",
+      "status": "NEW",
+      "color": ["black"],
+      "checkImg": {
+        "black": true
+      },
+      "linkImg": {
+        "black": "https://redikick.com/wp-content/uploads/2023/11/Redikick-Signature-Hoodie-A23024-avatar-4-430x430.jpg"
+      },
+      "img": "https://redikick.com/wp-content/uploads/2023/10/Redikick-Balo-Tech-Venture10-430x430.png"
+    },
+    {
+      "id": 7,
+      "name": "Quần nỉ Redikick Sportswear Fleece Q23018",
+      "price": "459.000₫",
+      "priceSale": "369.000₫",
+      "sale": "-20%",
+      "status": "NEW",
+      "color": ["black", "#AEAEB0"],
+      "checkImg": {
+        "black": true,
+
+        "#AEAEB0": false
+      },
+      "linkImg": {
+        "black": "https://redikick.com/wp-content/uploads/2023/10/quan-dai-the-thao-Redikick-Sportswear-Fleece-Q23018-mau-den-5-430x430.jpg",
+
+        "#AEAEB0": "https://redikick.com/wp-content/uploads/2023/10/quan-dai-the-thao-Redikick-Sportswear-Fleece-Q23018-mau-xam6-430x430.jpg"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Quần dài thể thao Redikick Unlimited Pants Q23015",
+      "price": "350.000₫",
+      "priceSale": "289.000₫",
+      "sale": "-17%",
+      "status": "NEW",
+      "color": ["black", "#AEAEB0"],
+      "checkImg": {
+        "black": true,
+
+        "#AEAEB0": false
+      },
+      "linkImg": {
+        "black": "https://redikick.com/wp-content/uploads/2023/10/quan-dai-the-thao-redikick-q23015-ong-suong-5-430x430.jpg",
+        "#333300": "https://redikick.com/wp-content/uploads/2023/11/Redikick-Signature-Hoodie-A23024-xam-chi-430x430.jpg",
+        "#AEAEB0": "https://redikick.com/wp-content/uploads/2023/10/quan-dai-the-thao-redikick-q23015-ong-suong-9-430x430.jpg"
+      }
+    }
+  ],
+  "Accessory": [
+    {
+      "id": 1,
+      "name": "Balo Redikick Tech-Venture Backpack – BP23001",
+      "price": "1.000.000₫",
+      "priceSale": "1.000.000₫",
+      "sale": "0%",
+      "status": "NEW",
+
+      "color": ["black"],
+      "checkImg": {
+        "black": true
+      },
+      "linkImg": {
+        "black": "https://redikick.com/wp-content/uploads/2023/10/Redikick-Balo-Tech-Venture10-430x430.png"
+      }
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

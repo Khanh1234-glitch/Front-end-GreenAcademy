@@ -1,0 +1,38 @@
+.header {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: black;
+    font-size: 13px;
+    z-index: 999;
+}
+.hover::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: red;
+    transition: 0.5s;
+}
+.hover:hover::after {
+    width: 100%;
+}
+.hover a {
+    color: black;
+    font-family: Josefin Sans;
+    font-weight: 400;
+    transition: 0.5s;
+}
+.hover a:hover {
+    color: rgb(51 51 51 / 70%);
+}
+.login {
+    font-size: 13px;
+}
+.login ul li a {
+    color: black;
+    transition: 0.5s;
+    font-family: Josefin Sans;
+    font-weight: 400;
+}
+.login ul li a:hover {
+    color: rgb(51 51 51 / 70%);
+}

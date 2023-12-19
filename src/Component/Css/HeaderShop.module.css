@@ -1,0 +1,31 @@
+header {
+    font-family: Josefin Sans;
+    font-weight: 400;
+}
+
+.img {
+    background-image: url(https://redikick.com/wp-content/uploads/2023/01/redikick-banner-hustle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: inherit;
+    background-position: center center;
+}
+
+.img ul li a {
+    color: white;
+    font-family: Josefin Sans;
+    font-weight: 400;
+}
+
+.img ul li a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    border-radius: 30px;
+    background-color: red;
+    transition: 0.5s;
+}
+.img ul li a:hover::after {
+    width: 100%;
+}

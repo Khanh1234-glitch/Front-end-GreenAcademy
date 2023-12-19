@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+}
+body {
+  /* color: #5b6987; */
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 16px;
+}
+input {
+  width: 100%;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}

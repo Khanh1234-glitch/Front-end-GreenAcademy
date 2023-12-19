@@ -1,0 +1,101 @@
+.product h4 {
+    color: #242424;
+    display: inline-block;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 700;
+    grid-area: auto;
+    line-height: 50.4px;
+    text-align: left;
+}
+.color {
+    display: flex;
+}
+.color .active {
+    border: 3px solid pink;
+}
+.color span {
+    opacity: 1;
+    font-size: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.price {
+    font-weight: 600;
+}
+.price p {
+    color: #dd3333;
+}
+.price span {
+    margin-right: 10px;
+    text-decoration: line-through;
+    color: #bbbbbb;
+}
+.productLabel {
+    font-size: 12px;
+    top: 10px;
+}
+.productLabel p:first-child {
+    background-color: #dd3333;
+    color: white;
+    padding: 5px 10px;
+}
+.productLabel p:last-child {
+    background-color: #438e44;
+    color: white;
+    padding: 5px 10px;
+}
+
+.shopping {
+    right: -10px;
+    top: 10px;
+    opacity: 0;
+    background-color: white;
+    padding: 10px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.card {
+    cursor: pointer;
+}
+.card:hover .shopping {
+    opacity: 1;
+    right: 20px;
+}
+
+.btn .btnLink {
+    border-radius: 35px;
+    background-color: #dd3333;
+    /* box-shadow: #000000 0px -2px 0px 0px; */
+    color: #ffffff;
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    width: 208px;
+}
+.btn .btnLink:hover::before {
+    opacity: 1;
+}
+.btn .btnLink::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    opacity: 0;
+    border-radius: 35px;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.292);
+}
