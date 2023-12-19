@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "../Css/Product.module.css";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function ShirtComponent() {
   const [data, setData] = useState([]);
@@ -46,12 +47,14 @@ function ShirtComponent() {
                       {Object.keys(item.checkImg).map((data) => {
                         if (item.checkImg[data]) {
                           return (
-                            <img
-                              props={item.linkImg[data]}
-                              src={item.linkImg[data]}
-                              className="card-img-top"
-                              alt={item.name}
-                            />
+                            <Link to={`/chi-tiet-san-pham/${item.id}`}>
+                              <img
+                                props={item.linkImg[data]}
+                                src={item.linkImg[data]}
+                                className="card-img-top"
+                                alt={item.name}
+                              />
+                            </Link>
                           );
                         }
                       })}

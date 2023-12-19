@@ -38,9 +38,9 @@ function ProductShopComponent() {
   return (
     <>
       <ProductComponent />
-      <ShirtComponent />
-      <AccessoryComponent />
-      <ShockComponent />
+      {/* <ShirtComponent /> */}
+      {/* <AccessoryComponent /> */}
+      {/* <ShockComponent /> */}
       <PantComponent />
     </>
   );

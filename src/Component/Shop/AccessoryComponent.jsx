@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import style from "../Css/Product.module.css";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function AccessoryComponent() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch(`https://657afcf5394ca9e4af1347f5.mockapi.io/AccessoryData`)
+    fetch(
+      `https://6561f5d0dcd355c083246743.mockapi.io/api/spbussiness/accessory`,
+    )
       .then((data) => {
         return data.json();
       })
@@ -43,12 +46,14 @@ function AccessoryComponent() {
                     {Object.keys(item.checkImg).map((data) => {
                       if (item.checkImg[data]) {
                         return (
-                          <img
-                            props={item.linkImg[data]}
-                            src={item.linkImg[data]}
-                            className="card-img-top"
-                            alt={item.name}
-                          />
+                          <Link to={`/chi-tiet-san-pham-phu-kien/${item.id}`}>
+                            <img
+                              props={item.linkImg[data]}
+                              src={item.linkImg[data]}
+                              className="card-img-top"
+                              alt={item.name}
+                            />
+                          </Link>
                         );
                       }
                     })}

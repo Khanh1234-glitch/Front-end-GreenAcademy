@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import style from "../Css/Product.module.css";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function BagComponent() {
   const [data, setData] = useState([]);
+
   useEffect(() => {
-    fetch(`https://657afcf5394ca9e4af1347f5.mockapi.io/bagData`)
+    fetch(`https://6565f442eb8bb4b70ef2aae2.mockapi.io/api/spbussiness/Bag`)
       .then((data) => {
         return data.json();
       })
@@ -40,12 +42,14 @@ function BagComponent() {
                 {Object.keys(item.checkImg).map((data) => {
                   if (item.checkImg[data]) {
                     return (
-                      <img
-                        props={item.linkImg[data]}
-                        src={item.linkImg[data]}
-                        className="card-img-top"
-                        alt={item.name}
-                      />
+                      <Link to={`/chi-tiet-san-pham-balo/${item.id}`}>
+                        <img
+                          props={item.linkImg[data]}
+                          src={item.linkImg[data]}
+                          className="card-img-top"
+                          alt={item.name}
+                        />
+                      </Link>
                     );
                   }
                 })}

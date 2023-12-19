@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import style from "../Css/Product.module.css";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import BagComponent from "../Shop/BagComponent";
+import AccessoryComponent from "../Shop/AccessoryComponent";
 
 function ProductComponent() {
   const [data, setData] = useState([]);
@@ -34,7 +36,7 @@ function ProductComponent() {
     });
   };
   return (
-    <>
+    <div>
       <div className={`${style.product} m-3`}>
         <div className="container ">
           <div className="row">
@@ -108,7 +110,9 @@ function ProductComponent() {
           </div>
         </div>
       </div>
-    </>
+      <BagComponent />
+      <AccessoryComponent />
+    </div>
   );
 }
 

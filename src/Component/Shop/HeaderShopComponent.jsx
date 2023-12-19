@@ -32,15 +32,12 @@ function HeaderShopComponent() {
                 <li>
                   <Link to={"/cua-hang/Tat"}>Tất thể thao</Link>
                 </li>
-                <li>
-                  <a href="#">Khác</a>
-                </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div className="shop-loop my-5 border-bottom pb-3">
+        <div className="shop-loop border-bottom my-5 pb-3">
           <div className="row">
             <div className="col-10">
               <Link to={"/"}>Trang chủ</Link>

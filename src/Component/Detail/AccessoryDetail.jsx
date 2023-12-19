@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import style from "../Css/Product.module.css";
-
-function ProductDetail() {
+function AccessoryDetail() {
   const [data, setData] = useState({});
   const [quantity, setQuantity] = useState(1);
   const [selectedColor, setSelectedColor] = useState("");
@@ -11,7 +10,7 @@ function ProductDetail() {
 
   useEffect(() => {
     fetch(
-      `https://6565f442eb8bb4b70ef2aae2.mockapi.io/api/spbussiness/data/${id}`,
+      `https://6561f5d0dcd355c083246743.mockapi.io/api/spbussiness/accessory/${id}`,
     )
       .then((response) => response.json())
       .then((result) => {
@@ -37,7 +36,6 @@ function ProductDetail() {
     setSelectedColor(color);
     setCurrentImage(data.linkImg[color]);
   };
-
   return (
     <>
       <div className="container-md mb-5 mt-5">
@@ -119,4 +117,4 @@ function ProductDetail() {
   );
 }
 
-export default ProductDetail;
+export default AccessoryDetail;

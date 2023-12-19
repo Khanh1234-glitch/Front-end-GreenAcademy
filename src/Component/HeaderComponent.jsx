@@ -26,10 +26,12 @@ function HeaderComponent(props) {
             <div className="row ">
               <div className="col">
                 <div className="logo " style={{ width: "50%" }}>
-                  <img
-                    src="https://redikick.com/wp-content/uploads/2021/08/logo-redikick-web.png"
-                    alt=""
-                  />
+                  <Link to={"/"}>
+                    <img
+                      src="https://redikick.com/wp-content/uploads/2021/08/logo-redikick-web.png"
+                      alt=""
+                    />
+                  </Link>
                 </div>
               </div>
               <div className="col text-black">

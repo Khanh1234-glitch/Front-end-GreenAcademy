@@ -16,6 +16,8 @@ import InfoComponent from "./Component/User/InfoUserComponent";
 import ProductDetail from "./Component/Detail/ProductDetail";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css";
+import BagDetail from "./Component/Detail/BagDetail";
+import AccessoryDetail from "./Component/Detail/AccessoryDetail";
 function App() {
   return (
     <>
@@ -26,6 +28,11 @@ function App() {
           <Route path="/dang-nhap" element={<SignInComponent />} />
           <Route path="/thong-tin-khach-hang" element={<InfoComponent />} />
           <Route path="/chi-tiet-san-pham/:id" element={<ProductDetail />} />
+          <Route path="/chi-tiet-san-pham-balo/:id" element={<BagDetail />} />
+          <Route
+            path="/chi-tiet-san-pham-phu-kien/:id"
+            element={<AccessoryDetail />}
+          />
           <Route path="/cua-hang" element={<BaseShopComponent />}>
             <Route index element={<ShopComponent />} />
             <Route path="/cua-hang/Balo" element={<BagComponent />} />
