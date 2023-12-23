@@ -18,6 +18,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css";
 import BagDetail from "./Component/Detail/BagDetail";
 import AccessoryDetail from "./Component/Detail/AccessoryDetail";
+import PantDetail from "./Component/Detail/PantsDetail";
+import ShockDetail from "./Component/Detail/ShockDetail";
 function App() {
   return (
     <>
@@ -29,6 +31,8 @@ function App() {
           <Route path="/thong-tin-khach-hang" element={<InfoComponent />} />
           <Route path="/chi-tiet-san-pham/:id" element={<ProductDetail />} />
           <Route path="/chi-tiet-san-pham-balo/:id" element={<BagDetail />} />
+          <Route path="/chi-tiet-san-pham-quan/:id" element={<PantDetail />} />
+          <Route path="/chi-tiet-san-pham-tat/:id" element={<ShockDetail />} />
           <Route
             path="/chi-tiet-san-pham-phu-kien/:id"
             element={<AccessoryDetail />}

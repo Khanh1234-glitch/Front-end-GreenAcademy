@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import style from "../Css/Product.module.css";
+import SpinnerComponent from "../SpinnerComponent";
 
 function BagDetail() {
   const [data, setData] = useState({});
@@ -35,7 +36,7 @@ function BagDetail() {
         <div className="container-md mb-5 mt-5">
           <div className="row">
             {Object.keys(data).length === 0 ? (
-              <p>Đang tải dữ liệu...</p>
+              <SpinnerComponent />
             ) : (
               <>
                 <div className="col-6">

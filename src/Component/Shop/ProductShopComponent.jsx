@@ -5,7 +5,7 @@ import ShirtComponent from "./ShirtComponent";
 import AccessoryComponent from "./AccessoryComponent";
 import ShockComponent from "./ShockComponent";
 import PantComponent from "./PantsComponent";
-
+import VisibilitySensor from "react-visibility-sensor";
 function ProductShopComponent() {
   return (
     <>

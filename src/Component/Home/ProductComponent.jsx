@@ -4,6 +4,9 @@ import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import BagComponent from "../Shop/BagComponent";
 import AccessoryComponent from "../Shop/AccessoryComponent";
+import ShockComponent from "../Shop/ShockComponent";
+import PantComponent from "../Shop/PantsComponent";
+import WOW from "wowjs";
 
 function ProductComponent() {
   const [data, setData] = useState([]);
@@ -18,6 +21,7 @@ function ProductComponent() {
         console.log(result);
       });
   }, []);
+
   const HandleOnclick = (id, color) => {
     setData((prev) => {
       return prev.map((item) => {
@@ -37,13 +41,18 @@ function ProductComponent() {
   };
   return (
     <div>
-      <div className={`${style.product} m-3`}>
+      <div className={`${style.product}`}>
         <div className="container ">
-          <div className="row">
+          <h4 className="my-3">
+            <strong>Shirt</strong>
+          </h4>
+          <div className="  grid  grid-cols-4 gap-10">
             {data &&
               data.map((item, index) => [
-                <div key={index} className="col-3 my-3">
-                  <div className={`${style.card} card position-relative`}>
+                <div key={index} className="wow fadeInUp h-full w-full  ">
+                  <div
+                    className={`${style.card} card position-relative  min-h-full w-full`}
+                  >
                     <Link key={index} to={`/chi-tiet-san-pham/${item.id}`}>
                       {Object.keys(item.checkImg).map((data) => {
                         if (item.checkImg[data]) {
@@ -107,11 +116,15 @@ function ProductComponent() {
                   </div>
                 </div>,
               ])}
+
+            <div></div>
           </div>
         </div>
       </div>
       <BagComponent />
-      <AccessoryComponent />
+      <AccessoryComponent />,
+      <PantComponent />
+      <ShockComponent />
     </div>
   );
 }

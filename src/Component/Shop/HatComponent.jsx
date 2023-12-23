@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "../Css/Product.module.css";
 import { FaShoppingCart } from "react-icons/fa";
-
+import VisibilitySensor from "react-visibility-sensor";
 function HatComponent() {
   const [data, setData] = useState([]);
   useEffect(() => {
