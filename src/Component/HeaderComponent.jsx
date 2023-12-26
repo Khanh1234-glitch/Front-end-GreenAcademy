@@ -4,12 +4,13 @@ import { FaShoppingCart } from "react-icons/fa";
 import style from "../Component/Css/Header.module.css";
 import CarouselComponent from "./Home/CarouselComponent";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AppContext } from "./AppContext/AppContext";
 function HeaderComponent(props) {
-  console.log(localStorage);
   const [user, setUser] = useState("");
   const name = localStorage.getItem("nameUser");
-  console.log(localStorage);
+  const { cartCount, cartSubTotal } = useContext(AppContext);
+
   useEffect(() => {
     if (localStorage.length == 0) {
       console.log("chưa có tài khoản");
@@ -88,7 +89,10 @@ function HeaderComponent(props) {
                     <li>
                       <a href="#">
                         <FaShoppingCart />
-                        <span>0 / 0₫</span>
+                        <span>
+                          {cartCount} /{" "}
+                          {cartSubTotal == 0 ? "0₫" : cartSubTotal + ".000₫"}
+                        </span>
                       </a>
                     </li>
                   </ul>
