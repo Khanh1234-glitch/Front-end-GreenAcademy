@@ -12,12 +12,21 @@ function HeaderComponent(props) {
   const { cartCount, cartSubTotal } = useContext(AppContext);
 
   useEffect(() => {
-    if (localStorage.length == 0) {
+    if (localStorage.length === 0) {
       console.log("chưa có tài khoản");
     } else {
       console.log("đã có tài khoản");
     }
   }, []);
+  // useEffect(() => {
+  //   localStorage.getItem("cartCount");
+  // }, [cartCount]);
+  const formatCurrency = (value) => {
+    return value.toLocaleString("vi-VN", {
+      style: "currency",
+      currency: "VND",
+    });
+  };
 
   return (
     <>
@@ -90,8 +99,10 @@ function HeaderComponent(props) {
                       <a href="#">
                         <FaShoppingCart />
                         <span>
-                          {cartCount} /{" "}
-                          {cartSubTotal == 0 ? "0₫" : cartSubTotal + ".000₫"}
+                          {cartCount} /
+                          {cartSubTotal == 0
+                            ? "0₫"
+                            : formatCurrency(cartSubTotal)}
                         </span>
                       </a>
                     </li>
