@@ -8,6 +8,7 @@ function ShockDetail() {
   const [selectedColor, setSelectedColor] = useState("");
   const [currentImage, setCurrentImage] = useState("");
   const { id } = useParams();
+  const { handleAddToCart } = useContext(AppContext);
   useEffect(() => {
     fetch(`https://625569258646add390d66a94.mockapi.io/api/data/${id}`)
       .then((response) => response.json())
@@ -101,7 +102,10 @@ function ShockDetail() {
                   </div>
                 </div>
                 <div className="col-4">
-                  <button className="bg-red-700 text-gray-50">
+                  <button
+                    onClick={() => handleAddToCart(data, quantity)}
+                    className="bg-red-700 text-gray-50"
+                  >
                     Thêm giỏ hàng
                   </button>
                 </div>

@@ -8,73 +8,93 @@ AppContext.propTypes = {
 };
 
 function AppContextProvider({ children }) {
-  const [cartItem, setCartItem] = useState([]);
-  const [cartCount, setCartCount] = useState(0);
+  const [cartItem, setCartItem] = useState(() => {
+    const storedCart = localStorage.getItem("cart");
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
+  const [cartCount, setCartCount] = useState(() => {
+    const storedCartCount = localStorage.getItem("cartCount");
+    return storedCartCount ? JSON.parse(storedCartCount) : 0;
+  });
   const [cartSubTotal, setCartSubTotal] = useState(0);
-  console.log(localStorage.getItem("cartCount"));
-  // Hàm để lưu giỏ hàng vào localStorage
-  const saveCartToSessionStorage = (cart) => {
+
+  const saveCartToLocalStorage = (cart) => {
     try {
-      console.log("Saving to sessionStorage:", cart);
-      sessionStorage.setItem("cart", JSON.stringify(cart));
+      saveToLocalStorage("cart", cart);
     } catch (error) {
-      console.error("Error saving to sessionStorage:", error);
+      console.error("Error saving to localStorage:", error);
     }
   };
-
-  const getCartFromSessionStorage = () => {
-    try {
-      const storedCart = sessionStorage.getItem("cart");
-      console.log("Retrieved from sessionStorage:", storedCart);
-      return storedCart ? JSON.parse(storedCart) : [];
-    } catch (error) {
-      console.error("Error retrieving from sessionStorage:", error);
-      return [];
-    }
+  const saveToLocalStorage = (key, data) => {
+    localStorage.setItem(key, JSON.stringify(data));
   };
 
   useEffect(() => {
-    // Lấy giỏ hàng từ localStorage khi component mount
-    const storedCart = getCartFromSessionStorage();
-    setCartItem(storedCart);
-    updateCartInfo(storedCart);
-  }, []);
+    // Lưu giỏ hàng vào localStorage
+    localStorage.setItem("cart", JSON.stringify(cartItem));
+
+    // Cập nhật và lưu cartCount
+    const updatedCartCount = cartItem.reduce(
+      (count, item) => count + item.quantity,
+      0,
+    );
+    localStorage.setItem("cartCount", JSON.stringify(updatedCartCount));
+    setCartCount(updatedCartCount);
+
+    // Cập nhật state
+    updateCartInfo(cartItem);
+  }, [cartItem]);
+
+  const updateCartInfo = (cart) => {
+    const count = cart.length;
+    setCartCount(count);
+
+    const total = cart.reduce((acc, val) => {
+      return acc + val.quantity * parseFloat(val.priceSale);
+    }, 0);
+    setCartSubTotal(total);
+  };
+
+  const handleAddToCart = (product, quantity, colorSelect) => {
+    const cart = [...cartItem];
+
+    const index = cart.findIndex(
+      (item) => item.id === product.id && item.color === color,
+    );
+    if (index < 0) {
+      product["quantity"] = quantity;
+      product["colorSelect"] = colorSelect;
+      cart.push(product);
+    } else {
+      cart[index].quantity += quantity;
+    }
+
+    // Lưu giỏ hàng vào localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Cập nhật state
+    setCartItem(cart);
+  };
 
   useEffect(() => {
-    // Mỗi khi giỏ hàng thay đổi, lưu vào localStorage và cập nhật thông tin giỏ hàng
-    saveCartToSessionStorage(cartItem);
+    saveCartToLocalStorage(cartItem);
     updateCartInfo(cartItem);
   }, [cartItem, cartCount]);
 
-  const updateCartInfo = (cart) => {
-    let count = 0;
-    cart.forEach(() => {
-      count += 1;
-    });
-    setCartCount(count);
-
-    let total = 0;
-    cart.forEach((val) => {
-      total += val.quantity * parseFloat(val.priceSale);
-    });
-    setCartSubTotal(total);
-  };
-  const handleAddToCart = (product, quantity) => {
+  const handleUpdateQuantity = (type, product) => {
     const cart = [...cartItem];
     const index = cart.findIndex((item) => item.id == product.id);
-    if (index < 0) {
-      // Nếu sản phẩm chưa có trong giỏ hàng, thêm mới
-      product["quantity"] = quantity;
-      cart.push(product);
-      localStorage.setItem("cartCount", JSON.stringify(cartCount));
-    } else {
-      // Nếu sản phẩm đã có trong giỏ hàng, cập nhật quantity
-      cart[index].quantity += quantity;
-    }
-    setCartItem(cart);
-    localStorage.setItem("cartCount", cartCount);
-  };
 
+    if (type == "minus") {
+      if (cart[index].quantity > 1) {
+        cart[index].quantity -= 1;
+      }
+    } else {
+      cart[index].quantity += 1;
+    }
+
+    setCartItem(cart);
+  };
   return (
     <AppContext.Provider
       value={{
@@ -85,6 +105,7 @@ function AppContextProvider({ children }) {
         cartCount,
         setCartCount,
         handleAddToCart,
+        handleUpdateQuantity,
       }}
     >
       {children}

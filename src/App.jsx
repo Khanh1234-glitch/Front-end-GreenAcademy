@@ -20,6 +20,7 @@ import BagDetail from "./Component/Detail/BagDetail";
 import AccessoryDetail from "./Component/Detail/AccessoryDetail";
 import PantDetail from "./Component/Detail/PantsDetail";
 import ShockDetail from "./Component/Detail/ShockDetail";
+import CartComponent from "./Component/CartComponent/CartComponent";
 function App() {
   return (
     <>
@@ -28,6 +29,7 @@ function App() {
           <Route index element={<HomeComponent />} />
           <Route path="/dang-ky" element={<RegisterComponent />} />
           <Route path="/dang-nhap" element={<SignInComponent />} />
+          <Route path="/gio-hang-thanh-toan" element={<CartComponent />} />
           <Route path="/thong-tin-khach-hang" element={<InfoComponent />} />
           <Route path="/chi-tiet-san-pham/:id" element={<ProductDetail />} />
           <Route path="/chi-tiet-san-pham-balo/:id" element={<BagDetail />} />

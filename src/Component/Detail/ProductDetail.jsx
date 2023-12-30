@@ -105,7 +105,7 @@ function ProductDetail() {
                 </div>
                 <div className="col-4">
                   <button
-                    onClick={() => handleAddToCart(data, 1)}
+                    onClick={() => handleAddToCart(data, quantity)}
                     className="bg-red-700 text-gray-50"
                   >
                     Thêm giỏ hàng

@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import style from "../Css/Product.module.css";
 import SpinnerComponent from "../SpinnerComponent";
+import { AppContext } from "../AppContext/AppContext";
 
 function BagDetail() {
   const [data, setData] = useState({});
   const [quantity, setQuantity] = useState(1);
   const [colors, setColors] = useState([0]);
+  const { handleAddToCart } = useContext(AppContext);
   const { id } = useParams();
   useEffect(() => {
     fetch(
@@ -107,7 +109,10 @@ function BagDetail() {
                         </div>
                       </div>
                       <div className="col-4">
-                        <button className="bg-red-700 text-gray-50">
+                        <button
+                          onClick={() => handleAddToCart(data, quantity)}
+                          className="bg-red-700 text-gray-50"
+                        >
                           Thêm giỏ hàng
                         </button>
                       </div>

@@ -10,24 +10,19 @@ function HeaderComponent(props) {
   const [user, setUser] = useState("");
   const name = localStorage.getItem("nameUser");
   const { cartCount, cartSubTotal } = useContext(AppContext);
+  const signUp = JSON.parse(localStorage.getItem("signIn"));
 
   useEffect(() => {
-    if (localStorage.length === 0) {
-      console.log("chưa có tài khoản");
-    } else {
-      console.log("đã có tài khoản");
-    }
-  }, []);
-  // useEffect(() => {
-  //   localStorage.getItem("cartCount");
-  // }, [cartCount]);
+    signUp;
+  }, [signUp]);
+
   const formatCurrency = (value) => {
     return value.toLocaleString("vi-VN", {
       style: "currency",
       currency: "VND",
     });
   };
-
+  const cartCountLocal = JSON.parse(localStorage.getItem("cartCount"));
   return (
     <>
       <Headroom>
@@ -77,9 +72,9 @@ function HeaderComponent(props) {
                     style={{ gap: "20px" }}
                   >
                     <li>
-                      {name ? (
+                      {signUp && signUp.fullName ? (
                         <Link to={"/thong-tin-khach-hang"}>
-                          Welcome, {name}
+                          Welcome, {signUp.fullName}
                         </Link>
                       ) : (
                         <Link to={"/dang-nhap"}>LOGIN / REGISTER</Link>
@@ -96,15 +91,15 @@ function HeaderComponent(props) {
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link to={`/gio-hang-thanh-toan`}>
                         <FaShoppingCart />
                         <span>
-                          {cartCount} /
+                          {cartCountLocal} /
                           {cartSubTotal == 0
                             ? "0₫"
                             : formatCurrency(cartSubTotal)}
                         </span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>

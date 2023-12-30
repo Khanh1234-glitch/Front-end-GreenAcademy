@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import style from "../Css/Product.module.css";
+import { AppContext } from "../AppContext/AppContext";
 
 function PantDetail() {
   const [data, setData] = useState({});
@@ -8,6 +9,7 @@ function PantDetail() {
   const [selectedColor, setSelectedColor] = useState("");
   const [currentImage, setCurrentImage] = useState("");
   const { id } = useParams();
+  const { handleAddToCart } = useContext(AppContext);
 
   useEffect(() => {
     fetch(`https://625569258646add390d66a94.mockapi.io/api/products/${id}`)
@@ -100,7 +102,10 @@ function PantDetail() {
                   </div>
                 </div>
                 <div className="col-4">
-                  <button className="bg-red-700 text-gray-50">
+                  <button
+                    onClick={() => handleAddToCart(data, quantity)}
+                    className="bg-red-700 text-gray-50"
+                  >
                     Thêm giỏ hàng
                   </button>
                 </div>
