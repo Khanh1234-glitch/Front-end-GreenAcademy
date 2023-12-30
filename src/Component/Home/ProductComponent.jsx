@@ -53,7 +53,10 @@ function ProductComponent() {
                   <div
                     className={`${style.card} card position-relative  min-h-full w-full`}
                   >
-                    <Link key={index} to={`/chi-tiet-san-pham/${item.id}`}>
+                    <Link
+                      key={index}
+                      to={`/deploy-react-js/chi-tiet-san-pham/${item.id}`}
+                    >
                       {Object.keys(item.checkImg).map((data) => {
                         if (item.checkImg[data]) {
                           return (
@@ -70,7 +73,7 @@ function ProductComponent() {
 
                     <div className="card-body">
                       <Link
-                        to={`/chi-tiet-san-pham/${item.id}`}
+                        to={`/deploy-react-js/chi-tiet-san-pham/${item.id}`}
                         className="card-text"
                       >
                         {item.name}

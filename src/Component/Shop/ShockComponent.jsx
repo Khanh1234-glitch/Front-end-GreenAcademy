@@ -59,7 +59,9 @@ function ShockComponent() {
                       {Object.keys(item.checkImg).map((product) => {
                         if (item.checkImg[product]) {
                           return (
-                            <Link to={`/chi-tiet-san-pham-tat/${item.id}`}>
+                            <Link
+                              to={`/deploy-react-js/chi-tiet-san-pham-tat/${item.id}`}
+                            >
                               <img
                                 props={item.linkImg[product]}
                                 src={item.linkImg[product]}
@@ -73,7 +75,7 @@ function ShockComponent() {
 
                       <div className="card-body">
                         <Link
-                          to={`/chi-tiet-san-pham-tat/${item.id}`}
+                          to={`/deploy-react-js/chi-tiet-san-pham-tat/${item.id}`}
                           className="card-text"
                         >
                           {item.name}

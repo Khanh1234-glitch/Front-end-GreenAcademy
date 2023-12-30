@@ -61,7 +61,9 @@ function PantComponent() {
                         {Object.keys(item.checkImg).map((product) => {
                           if (item.checkImg[product]) {
                             return (
-                              <Link to={`/chi-tiet-san-pham-quan/${item.id}`}>
+                              <Link
+                                to={`/deploy-react-js/chi-tiet-san-pham-quan/${item.id}`}
+                              >
                                 <img
                                   props={item.linkImg[product]}
                                   src={item.linkImg[product]}
@@ -75,7 +77,7 @@ function PantComponent() {
 
                         <div className="card-body">
                           <Link
-                            to={`/chi-tiet-san-pham-quan/${item.id}`}
+                            to={`/deploy-react-js/chi-tiet-san-pham-quan/${item.id}`}
                             className="card-text"
                           >
                             {item.name}

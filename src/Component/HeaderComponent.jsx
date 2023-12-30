@@ -43,24 +43,28 @@ function HeaderComponent(props) {
                 <div className="menu">
                   <ul className="d-flex justify-content-between align-item-center my-2 text-black">
                     <li className={`${style.hover}`}>
-                      <Link to="/">HOME</Link>
+                      <Link to="/deploy-react-js">HOME</Link>
                     </li>
                     <li className={`${style.hover}`}>
-                      <Link to="/cua-hang" name={props.name}>
+                      <Link to="/deploy-react-js/cua-hang" name={props.name}>
                         SHOP
                       </Link>
                     </li>
                     <li className={`${style.hover}`}>
-                      <Link to={"/cua-hang/Tat"}>TẤT</Link>
+                      <Link to={"/deploy-react-js/cua-hang/Tat"}>TẤT</Link>
                     </li>
                     <li className={`${style.hover}`}>
-                      <Link to={"/cua-hang/Quan-the-thao"}>QUẦN</Link>
+                      <Link to={"/deploy-react-js/cua-hang/Quan-the-thao"}>
+                        QUẦN
+                      </Link>
                     </li>
                     <li className={`${style.hover}`}>
-                      <Link to="/cua-hang/ao-the-thao">ÁO</Link>
+                      <Link to="/deploy-react-js/cua-hang/ao-the-thao">ÁO</Link>
                     </li>
                     <li className={`${style.hover}`}>
-                      <Link to="/cua-hang/phu-kien-the-thao">PHỤ KIỆN</Link>
+                      <Link to="/deploy-react-js/cua-hang/phu-kien-the-thao">
+                        PHỤ KIỆN
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -73,11 +77,13 @@ function HeaderComponent(props) {
                   >
                     <li>
                       {signUp && signUp.fullName ? (
-                        <Link to={"/thong-tin-khach-hang"}>
+                        <Link to={"/deploy-react-js/thong-tin-khach-hang"}>
                           Welcome, {signUp.fullName}
                         </Link>
                       ) : (
-                        <Link to={"/dang-nhap"}>LOGIN / REGISTER</Link>
+                        <Link to={"/deploy-react-js/dang-nhap"}>
+                          LOGIN / REGISTER
+                        </Link>
                       )}
                     </li>
                     <li>
@@ -91,7 +97,7 @@ function HeaderComponent(props) {
                       </a>
                     </li>
                     <li>
-                      <Link to={`/gio-hang-thanh-toan`}>
+                      <Link to={`/deploy-react-js/gio-hang-thanh-toan`}>
                         <FaShoppingCart />
                         <span>
                           {cartCountLocal} /

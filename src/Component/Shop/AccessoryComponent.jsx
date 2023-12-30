@@ -59,7 +59,9 @@ function AccessoryComponent() {
                       {Object.keys(item.checkImg).map((data) => {
                         if (item.checkImg[data]) {
                           return (
-                            <Link to={`/chi-tiet-san-pham-phu-kien/${item.id}`}>
+                            <Link
+                              to={`/deploy-react-js/chi-tiet-san-pham-phu-kien/${item.id}`}
+                            >
                               <img
                                 props={item.linkImg[data]}
                                 src={item.linkImg[data]}

@@ -46,7 +46,9 @@ function BagComponent() {
               {Object.keys(item.checkImg).map((data) => {
                 if (item.checkImg[data]) {
                   return (
-                    <Link to={`/chi-tiet-san-pham-balo/${item.id}`}>
+                    <Link
+                      to={`/deploy-react-js/chi-tiet-san-pham-balo/${item.id}`}
+                    >
                       <img
                         props={item.linkImg[data]}
                         src={item.linkImg[data]}

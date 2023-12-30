@@ -13,24 +13,28 @@ function HeaderShopComponent() {
                 style={{ gap: "25px", padding: "100px" }}
               >
                 <li>
-                  <Link to="/cua-hang/Balo">Balo</Link>
+                  <Link to="/deploy-react-js/cua-hang/Balo">Balo</Link>
                 </li>
                 <li>
-                  <Link to="/cua-hang/Hat">Mũ</Link>
+                  <Link to="/deploy-react-js/cua-hang/Hat">Mũ</Link>
                 </li>
                 <li>
-                  <Link to="/cua-hang/ao-the-thao">Áo thể thao</Link>
+                  <Link to="/deploy-react-js/cua-hang/ao-the-thao">
+                    Áo thể thao
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/cua-hang/phu-kien-the-thao">
+                  <Link to="/deploy-react-js/cua-hang/phu-kien-the-thao">
                     Phụ kiện thể thao
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/cua-hang/Quan-the-thao"}>Quần</Link>
+                  <Link to={"/deploy-react-js/cua-hang/Quan-the-thao"}>
+                    Quần
+                  </Link>
                 </li>
                 <li>
-                  <Link to={"/cua-hang/Tat"}>Tất thể thao</Link>
+                  <Link to={"/deploy-react-js/cua-hang/Tat"}>Tất thể thao</Link>
                 </li>
               </ul>
             </div>
