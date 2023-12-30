@@ -6,7 +6,6 @@ import BagComponent from "../Shop/BagComponent";
 import AccessoryComponent from "../Shop/AccessoryComponent";
 import ShockComponent from "../Shop/ShockComponent";
 import PantComponent from "../Shop/PantsComponent";
-import WOW from "wowjs";
 
 function ProductComponent() {
   const [data, setData] = useState([]);
