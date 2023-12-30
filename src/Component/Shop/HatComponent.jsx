@@ -12,6 +12,7 @@ function HatComponent() {
         setData(result);
       });
   }, []);
+  // a
   console.log(data);
   const HandleOnclick = (id, color) => {
     setData((prev) => {
