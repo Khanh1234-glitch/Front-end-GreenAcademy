@@ -102,6 +102,7 @@ function AppContextProvider({ children }) {
         setCartItem,
         cartSubTotal,
         setCartSubTotal,
+
         cartCount,
         setCartCount,
         handleAddToCart,

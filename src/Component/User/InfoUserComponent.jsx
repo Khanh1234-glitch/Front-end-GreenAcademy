@@ -54,7 +54,7 @@ function InfoComponent() {
           </dl>
           <div className=" mt-13 flex justify-end ">
             <Link
-              to={"/"}
+              to={"/deploy-react-js"}
               onClick={logout}
               className="  rounded-lg bg-red-700 p-2 text-gray-50"
             >

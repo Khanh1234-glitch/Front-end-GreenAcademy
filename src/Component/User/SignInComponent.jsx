@@ -82,7 +82,7 @@ function SignInComponent() {
           <p className="mt-10 text-center text-sm text-gray-500">
             Bạn chưa có tài khoản ?
             <Link
-              to={"/dang-ky"}
+              to={"/deploy-react-js/dang-ky"}
               className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
             >
               Đăng kí tài khoản

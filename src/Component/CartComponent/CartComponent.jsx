@@ -84,10 +84,9 @@ function CartComponent() {
                             </MDBBtn>
 
                             <MDBInput
-                              defaultValue={item.quantity}
+                              value={item.quantity}
                               min={0}
-                              type="number"
-                              label="Quantity"
+                              label="Số lượng"
                               onChange={(e) => {
                                 // Đảm bảo rằng giá trị nhập là một số không âm
                                 const newQuantity = Math.max(

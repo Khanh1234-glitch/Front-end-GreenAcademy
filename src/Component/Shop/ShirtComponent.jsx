@@ -42,7 +42,7 @@ function ShirtComponent() {
             <div className="row">
               {data &&
                 data.map((item, index) => [
-                  <div key={index} className="col-3 my-3">
+                  <div key={index} className="col-3 .col-lg-4 my-3">
                     <div className={`${style.card} card position-relative`}>
                       {Object.keys(item.checkImg).map((data) => {
                         if (item.checkImg[data]) {

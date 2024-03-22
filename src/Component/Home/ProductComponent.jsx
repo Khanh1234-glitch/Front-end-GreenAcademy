@@ -45,7 +45,7 @@ function ProductComponent() {
           <h4 className="my-3">
             <strong>Shirt</strong>
           </h4>
-          <div className="  grid  grid-cols-4 gap-10">
+          <div className="  grid  grid-cols-4 flex-wrap gap-10">
             {data &&
               data.map((item, index) => [
                 <div key={index} className="wow fadeInUp h-full w-full  ">
