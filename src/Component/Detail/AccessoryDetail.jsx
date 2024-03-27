@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import style from "../Css/Product.module.css";
 import { AppContext } from "../AppContext/AppContext";
+
 function AccessoryDetail() {
   const [data, setData] = useState({});
   const [quantity, setQuantity] = useState(1);
   const [selectedColor, setSelectedColor] = useState("");
-
   const [currentImage, setCurrentImage] = useState("");
   const { handleAddToCart } = useContext(AppContext);
   const { id } = useParams();
@@ -114,7 +114,11 @@ function AccessoryDetail() {
                   </button>
                 </div>
                 <div className="col-4">
-                  <button className="bg-red-700 text-gray-50">Mua ngay</button>
+                  <Link to={`/deploy-react-js/gio-hang-thanh-toan`}>
+                    <button className="bg-red-700 text-gray-50">
+                      Mua ngay
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

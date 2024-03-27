@@ -1,17 +1,17 @@
 import Headroom from "react-headroom";
-import { FaMagnifyingGlass, FaRegHeart } from "react-icons/fa6";
+
 import { FaShoppingCart } from "react-icons/fa";
 import style from "../Component/Css/Header.module.css";
-import CarouselComponent from "./Home/CarouselComponent";
+
 import { Link } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { AppContext } from "./AppContext/AppContext";
 import { useAuth } from "./AppContext/AuthContext";
 function HeaderComponent(props) {
   const { user, logout } = useAuth();
   // const [user, setUser] = useState("");
   const name = localStorage.getItem("nameUser");
-  const { cartCount, cartSubTotal } = useContext(AppContext);
+  const { cartSubTotal } = useContext(AppContext);
   const formatCurrency = (value) => {
     return value.toLocaleString("vi-VN", {
       style: "currency",
@@ -42,7 +42,7 @@ function HeaderComponent(props) {
                   </Link>
                 </div>
               </div>
-              <div className="col text-black">
+              <div className="col my-2 text-black">
                 <div className={style.menu}>
                   <ul
                     className={`d-flex justify-content-between align-item-center my-2 text-black  `}
@@ -74,7 +74,7 @@ function HeaderComponent(props) {
                   </ul>
                 </div>
               </div>
-              <div className="col">
+              <div className="col my-2">
                 <div className={style.login}>
                   <ul
                     className=" d-flex justify-content-content my-2"
@@ -91,19 +91,13 @@ function HeaderComponent(props) {
                         </Link>
                       )}
                     </li>
-                    <li>
-                      <a href="#">
-                        <FaMagnifyingGlass />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <FaRegHeart />
-                      </a>
-                    </li>
-                    <li>
-                      <Link to={`/deploy-react-js/gio-hang-thanh-toan`}>
-                        <FaShoppingCart />
+
+                    <li className="w-25 ">
+                      <Link
+                        className="d-flex "
+                        to={`/deploy-react-js/gio-hang-thanh-toan`}
+                      >
+                        <FaShoppingCart className="me-2" />
                         <span>
                           {cartCountLocal} /
                           {cartSubTotal == 0

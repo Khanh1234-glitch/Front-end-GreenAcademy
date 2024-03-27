@@ -21,6 +21,7 @@ import AccessoryDetail from "./Component/Detail/AccessoryDetail";
 import PantDetail from "./Component/Detail/PantsDetail";
 import ShockDetail from "./Component/Detail/ShockDetail";
 import CartComponent from "./Component/CartComponent/CartComponent";
+import Checkout from "./Component/CartComponent/Checkout";
 function App() {
   return (
     <>
@@ -39,6 +40,11 @@ function App() {
             path="/deploy-react-js/gio-hang-thanh-toan"
             element={<CartComponent />}
           />
+          <Route
+            element={<Checkout />}
+            path="/deploy-react-js/thongtinthanhtoan"
+          />
+
           <Route
             path="/deploy-react-js/thong-tin-khach-hang"
             element={<InfoComponent />}

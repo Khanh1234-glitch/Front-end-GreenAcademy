@@ -17,12 +17,17 @@ import {
 } from "mdb-react-ui-kit";
 import React, { useContext, useState } from "react";
 import { AppContext } from "../AppContext/AppContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function CartComponent() {
   const navigate = useNavigate();
-  const { cartItem, cartCount, cartSubTotal, handleUpdateQuantity } =
-    useContext(AppContext);
+  const {
+    cartItem,
+    cartCount,
+    cartSubTotal,
+    handleUpdateQuantity,
+    handleRemoveFromCart,
+  } = useContext(AppContext);
   const handleBackToShop = () => {
     navigate("/");
   };
@@ -112,8 +117,20 @@ function CartComponent() {
                               <span> </span>VND
                             </strong>
                           </p>
+                          <div className=" d-flex height-100 flex-row-reverse">
+                            {" "}
+                            <button
+                              className="bg-danger text-white"
+                              onClick={() => {
+                                handleRemoveFromCart(item);
+                              }}
+                            >
+                              X
+                            </button>
+                          </div>
                         </MDBCol>
                       </MDBRow>
+
                       <hr className="my-4" />
                     </>
                   ))}
@@ -146,10 +163,11 @@ function CartComponent() {
                       </span>
                     </MDBListGroupItem>
                   </MDBListGroup>
-
-                  <MDBBtn onClick={handleBackToShop} block size="lg">
-                    Go to checkout
-                  </MDBBtn>
+                  <Link to={`/deploy-react-js/thongtinthanhtoan`}>
+                    <MDBBtn onClick={handleBackToShop} block size="lg">
+                      Go to checkout
+                    </MDBBtn>
+                  </Link>
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>

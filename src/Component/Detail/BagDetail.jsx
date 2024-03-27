@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import style from "../Css/Product.module.css";
 import SpinnerComponent from "../SpinnerComponent";
 import { AppContext } from "../AppContext/AppContext";
@@ -117,9 +117,11 @@ function BagDetail() {
                         </button>
                       </div>
                       <div className="col-4">
-                        <button className="bg-red-700 text-gray-50">
-                          Mua ngay
-                        </button>
+                        <Link to={`/deploy-react-js/gio-hang-thanh-toan`}>
+                          <button className="bg-red-700 text-gray-50">
+                            Mua ngay
+                          </button>
+                        </Link>
                       </div>
                     </div>
                   </div>

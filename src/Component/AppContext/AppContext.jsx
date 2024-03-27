@@ -75,6 +75,12 @@ function AppContextProvider({ children }) {
     // Cập nhật state
     setCartItem(cart);
   };
+  const handleRemoveFromCart = (product) => {
+    const cart = [...cartItem];
+    const newcart = cart.filter((item) => item.id != product.id);
+
+    setCartItem(newcart);
+  };
 
   useEffect(() => {
     saveCartToLocalStorage(cartItem);
@@ -84,7 +90,6 @@ function AppContextProvider({ children }) {
   const handleUpdateQuantity = (type, product) => {
     const cart = [...cartItem];
     const index = cart.findIndex((item) => item.id == product.id);
-
     if (type == "minus") {
       if (cart[index].quantity > 1) {
         cart[index].quantity -= 1;
@@ -102,11 +107,11 @@ function AppContextProvider({ children }) {
         setCartItem,
         cartSubTotal,
         setCartSubTotal,
-
         cartCount,
         setCartCount,
         handleAddToCart,
         handleUpdateQuantity,
+        handleRemoveFromCart,
       }}
     >
       {children}

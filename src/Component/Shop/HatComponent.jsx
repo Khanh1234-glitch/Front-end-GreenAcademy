@@ -12,7 +12,6 @@ function HatComponent() {
         setData(result);
       });
   }, []);
-  // a
   console.log(data);
   const HandleOnclick = (id, color) => {
     setData((prev) => {
@@ -35,7 +34,8 @@ function HatComponent() {
     <div className={`${style.product} m-3`}>
       <div className="container ">
         <div className="row">
-          {data &&
+          {data.lenght > 0 ? (
+            data &&
             data.map((item, index) => (
               <>
                 <div key={index} className="col-3 my-3">
@@ -97,7 +97,10 @@ function HatComponent() {
                 </div>
                 ,
               </>
-            ))}
+            ))
+          ) : (
+            <p>Không có sản phẩm</p>
+          )}
         </div>
       </div>
     </div>
